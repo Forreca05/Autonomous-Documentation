@@ -3,6 +3,15 @@ from datetime import datetime
 
 class Task:
     def __init__(self, title: str, due_date: Optional[datetime] = None):
+        """Initialize a new Task object.
+        
+        Args:
+            title (str): The title of the task.
+            due_date (Optional[datetime], optional): The due date for the task. Defaults to None.
+        
+        Returns:
+            None: This method doesn't return anything; it initializes the object's attributes.
+        """
         self.title = title
         self.completed = False
         self.created_at = datetime.now()
@@ -12,6 +21,11 @@ class Task:
         self.completed = True
 
     def is_overdue(self) -> bool:
+        """Checks if the task is overdue based on its due date.
+        
+        Returns:
+            bool: True if the task is overdue, False otherwise.
+        """
         if self.due_date:
             return datetime.now() > self.due_date
         return False
@@ -24,6 +38,15 @@ class TaskManager:
         self.tasks: List[Task] = []
 
     def add_task(self, title: str, due_date: Optional[datetime] = None) -> Task:
+        """Adds a new task to the task list.
+        
+        Args:
+            title str: The title of the task.
+            due_date Optional[datetime]: The due date of the task. Defaults to None.
+        
+        Returns:
+            Task: The newly created task object.
+        """
         task = Task(title, due_date)
         self.tasks.append(task)
         return task
@@ -32,9 +55,26 @@ class TaskManager:
         return [task for task in self.tasks if not task.completed]
 
     def get_overdue_tasks(self) -> List[Task]:
+        """
+        Retrieves a list of overdue tasks that are not completed.
+        
+        Args:
+            self: The instance of the class containing the tasks.
+        
+        Returns:
+            List[Task]: A list of Task objects that are overdue and not completed.
+        """
         return [task for task in self.tasks if task.is_overdue() and not task.completed]
 
     def complete_task(self, title: str) -> bool:
+        """Completes a task with the given title if it exists and is not already completed.
+        
+        Args:
+            title (str): The title of the task to be completed.
+        
+        Returns:
+            bool: True if the task was found and completed, False otherwise.
+        """
         for task in self.tasks:
             if task.title == title and not task.completed:
                 task.mark_complete()
