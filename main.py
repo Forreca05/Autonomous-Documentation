@@ -12,7 +12,7 @@ def initialize_storage():
     # task_manager.initialize_storage(config.TASK_STORAGE_URL)
  
 def display_menu():
-    print("Welcome to the Task Manager")
+    print("Welcome to the Task Manager")   
     print("1. View Tasks")
     print("2. Add Task") 
     print("3. Exit")
