@@ -15,7 +15,7 @@ def display_menu():
     print("Welcome to the Task Manager")   
     print("1. View Tasks")
     print("2. Add Task") 
-    print("3. Exit")
+    print("3. Exit")    
 
 def main():
     load_configurations()
