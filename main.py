@@ -1,5 +1,3 @@
-
-# Create main.py with application entry point
 main_content = '''import config
 import task_manager  # Assuming task_manager.py exists in the same directory
 
