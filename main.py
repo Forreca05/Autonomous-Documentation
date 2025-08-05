@@ -14,7 +14,7 @@ def initialize_storage():
 def display_menu():
     print("Welcome to the Task Manager")
     print("1. View Tasks")
-    print("2. Add Task")
+    print("2. Add Task") 
     print("3. Exit")
 
 def main():
