@@ -16,7 +16,7 @@ def display_menu():
     print("1. View Tasks")
     print("2. Add Task") 
     print("3. Exit")    
-
+   
 def main():
     load_configurations()
     initialize_storage()
