@@ -10,7 +10,7 @@ def initialize_storage():
     print("Initializing task storage...")
     # Placeholder for actual initialization logic
     # task_manager.initialize_storage(config.TASK_STORAGE_URL)
-
+ 
 def display_menu():
     print("Welcome to the Task Manager")
     print("1. View Tasks")
