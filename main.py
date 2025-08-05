@@ -7,7 +7,7 @@ def load_configurations():
     print(f"Log File Path: {config.LOG_FILE_PATH}")
 
 def initialize_storage():
-    print("Initializing task storage...")
+    print("Initializing task storage...")    
     # Placeholder for actual initialization logic
     # task_manager.initialize_storage(config.TASK_STORAGE_URL)
  
