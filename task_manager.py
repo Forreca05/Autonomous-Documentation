@@ -42,3 +42,4 @@ class TaskManager:
 
 # Instância global para ser usada em main.py
 task_manager = TaskManager()  
+  
