@@ -62,3 +62,6 @@ with open("main.py", "w") as f:
     f.write(main_content)
 
 print("✅ Arquivos utils.py, config.py e main.py foram criados com sucesso.")
+
+
+
