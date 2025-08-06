@@ -67,3 +67,4 @@ print("✅ Arquivos utils.py, config.py e main.py foram criados com sucesso.")
 
 
 
+
