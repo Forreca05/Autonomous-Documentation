@@ -41,4 +41,4 @@ class TaskManager:
             print(f"- {task.title} [{status}] {overdue}")
 
 # Instância global para ser usada em main.py
-task_manager = TaskManager()
+task_manager = TaskManager()  
