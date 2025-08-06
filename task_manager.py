@@ -1,5 +1,7 @@
-from typing import List, Optional
+# task_manager.py
+
 from datetime import datetime
+from typing import List, Optional
 
 class Task:
     def __init__(self, title: str, due_date: Optional[datetime] = None):
@@ -17,7 +19,7 @@ class Task:
         return False
 
     def __repr__(self):
-        return f"<Task title={self.title} completed={self.completed}>"
+        return f"<Task title='{self.title}' completed={self.completed}>"
 
 class TaskManager:
     def __init__(self):
@@ -28,18 +30,15 @@ class TaskManager:
         self.tasks.append(task)
         return task
 
-    def get_pending_tasks(self) -> List[Task]:
-        return [task for task in self.tasks if not task.completed]
-
-    def get_overdue_tasks(self) -> List[Task]:
-        return [task for task in self.tasks if task.is_overdue() and not task.completed]
-
-    def complete_task(self, title: str) -> bool:
+    def view_tasks(self):
+        if not self.tasks:
+            print("Nenhuma tarefa encontrada.")
+            return
+        print("\nTarefas:")
         for task in self.tasks:
-            if task.title == title and not task.completed:
-                task.mark_complete()
-                return True
-        return False
+            status = "✅" if task.completed else "⏳"
+            overdue = "⚠️ Atrasada" if task.is_overdue() else ""
+            print(f"- {task.title} [{status}] {overdue}")
 
-    def __repr__(self):
-        return f"<TaskManager tasks={len(self.tasks)}>"
+# Instância global para ser usada em main.py
+task_manager = TaskManager()
