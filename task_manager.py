@@ -36,8 +36,8 @@ class TaskManager:
             return
         print("\nTarefas:")
         for task in self.tasks:
-            status = "✅" if task.completed else "⏳"
-            overdue = "⚠️ Atrasada" if task.is_overdue() else ""
+            status = "" if task.completed else ""
+            overdue = " Atrasada" if task.is_overdue() else ""
             print(f"- {task.title} [{status}] {overdue}")
 
 # Instância global para ser usada em main.py
