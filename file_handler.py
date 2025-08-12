@@ -11,4 +11,3 @@ def write_file(filepath: str, content: str) -> None:
     """Escreve o conteúdo no ficheiro, substituindo se já existir."""
     with open(filepath, 'w', encoding='utf-8') as f:
         f.write(content)
-
